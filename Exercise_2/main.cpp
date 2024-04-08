@@ -10,38 +10,28 @@ int main()
     NumeroComplesso b(1, -2);
 
     // Stampa dei numeri complessi
-    cout << "Numero complesso a: ";
-    a.stampa();
-    cout << endl;
-
-    cout << "Numero complesso b: ";
-    b.stampa();
-    cout << endl;
+    cout << "Numero complesso a: " << a.rappresentazione() << endl;
+    cout << "Numero complesso b: " << b.rappresentazione() << endl;
 
     // Somma dei numeri complessi
     NumeroComplesso somma = a + b;
-    cout << "Somma di a e b: ";
-    somma.stampa();
-    cout << endl;
+    cout << "Somma di a e b: " << somma.rappresentazione() << endl;
 
     // Confronto tra i numeri complessi
     if (a == b)
     {
-        cout << "I numeri complessi a e b sono uguali." << endl;
-    } else
+        cout << "I numeri complessi a e b sono uguali" << endl;
+    }
+    else
     {
-        cout << "I numeri complessi a e b sono diversi." << endl;
+        cout << "I numeri complessi a e b sono diversi" << endl;
     }
 
     // Calcolo dei coniugati
     NumeroComplesso coniugatoA = a.coniugato();
     NumeroComplesso coniugatoB = b.coniugato();
-    cout << "Coniugato di a: ";
-    coniugatoA.stampa();
-    cout << endl;
-    cout << "Coniugato di b: ";
-    coniugatoB.stampa();
-    cout << endl;
+    cout << "Coniugato di a: " << coniugatoA.rappresentazione() << endl;
+    cout << "Coniugato di b: " << coniugatoB.rappresentazione() << endl;
 
     return 0;
 }

@@ -1,18 +1,18 @@
 #include "ComplexNumber.hpp"
 #include <iostream>
-
-using namespace std;
+#include <sstream>
 
 // Implementazione del costruttore
 NumeroComplesso::NumeroComplesso(double re, double im) : reale(re), immaginario(im) {}
 
-// Implementazione del metodo per stampare il numero complesso
-void NumeroComplesso::stampa() const
-{
-    cout << reale;
+// Metodo per ottenere la rappresentazione del numero complesso come stringa
+std::string NumeroComplesso::rappresentazione() const {
+    std::ostringstream oss;
+    oss << reale;
     if (immaginario >= 0)
-        cout << "+";
-    cout << immaginario << "i";
+        oss << "+";
+    oss << immaginario << "i";
+    return oss.str();
 }
 
 // Implementazione dell'operatore di somma

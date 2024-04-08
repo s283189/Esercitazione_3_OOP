@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 class NumeroComplesso
 {
 private:
@@ -10,8 +12,8 @@ public:
     // Costruttore
     NumeroComplesso(double re, double im);
 
-    // Metodo per stampare il numero complesso
-    void stampa() const;
+    // Metodo per ottenere la rappresentazione del numero complesso come stringa
+    std::string rappresentazione() const;
 
     // Operatore di somma
     NumeroComplesso operator+(const NumeroComplesso& altro) const;
@@ -22,4 +24,5 @@ public:
     // Funzione per calcolare il coniugato
     NumeroComplesso coniugato() const;
 };
+
 
